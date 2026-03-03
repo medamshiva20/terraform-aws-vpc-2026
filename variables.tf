@@ -12,6 +12,11 @@ variable "cidr_block"{
 }
 
 variable "vpc_tags"{
-    type = string 
+    type = map(string)
+    default = {}
+}
+
+variable "igw_tags"{
+    type = map
     default = {}
 }
