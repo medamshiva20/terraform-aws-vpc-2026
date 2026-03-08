@@ -36,7 +36,7 @@ variable "private_subnet_cidrs"{
     default = ["10.0.11.0/24","10.0.12.0/24"]
 }
 
-variable "private_sunbet_tags"{
+variable "private_subnet_tags"{
     type = map
     default = {}
 }
