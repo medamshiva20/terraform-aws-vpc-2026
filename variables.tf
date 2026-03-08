@@ -47,7 +47,7 @@ variable "database_subnet_cidrs"{
     default = ["10.1.21.0/24","10.0.22.0/24"]
 }
 
-variable "data_subnet_tags"{
+variable "database_subnet_tags"{
     type = map
     default = {}
 }
