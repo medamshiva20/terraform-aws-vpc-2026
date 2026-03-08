@@ -44,6 +44,7 @@ resource "aws_sunbet" "private"{
     )
 }
 
+#database subnet
 resource "aws_subnet" "database"{
     vpc_id = aws_vpc.main.id
     count = length(var.database_subnet_cidrs)
