@@ -29,7 +29,7 @@ resource "aws_internet_gateway" "main"{
 }
 
 #private subnet
-resource "aws_sunbet" "private"{
+resource "aws_subnet" "private"{
     vpc_id = aws_vpc.main.id
     count = length(var.private_subnet_cidrs)
     cidr_block = var.private_subnet_cidrs[count.index]
