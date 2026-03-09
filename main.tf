@@ -100,3 +100,15 @@ resource "aws_route" "public"{
     destination_cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.main.id
 }
+
+resource "aws_eip" "nat"{
+    domain = "vpc"
+
+    tags = merge(
+        local.common_tags,
+        {
+            Name = "${var.project}-${var.environment}-nat"
+        },
+        var.eip_tags
+    )
+}
