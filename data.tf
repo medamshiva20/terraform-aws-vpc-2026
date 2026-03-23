@@ -10,3 +10,11 @@ data "aws_availability_zones" "available"{
 data "aws_vpc" "prod-vpc"{
    id = "vpc-072112754da905ebf"
 }
+
+data "aws_route_table" "prod"{
+    vpc_id = data.aws_vpc.prod-vpc.id
+    filter {
+        name = "association.main"
+        values = ["true"]
+    }
+}
