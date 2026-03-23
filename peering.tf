@@ -31,5 +31,5 @@ resource "aws_route" "prod_vpc_peering"{
     count = var.is_peering_required ? 1 : 0
     route_table_id = data.aws_route_table.prod.id
     destination_cidr_block = var.cidr_block
-    vpc_peering_connection_id = aws_vpc_peering_connection.default.id
+    vpc_peering_connection_id = aws_vpc_peering_connection.default[count.index].id
 }
