@@ -7,12 +7,12 @@ data "aws_availability_zones" "available"{
  # default = true
 #}
 
-data "aws_vpc" "prod-vpc"{
+data "aws_vpc" "prod_vpc"{
    id = "vpc-02369099af5a5808c"
 }
 
 data "aws_route_table" "prod"{
-    vpc_id = data.aws_vpc.prod-vpc.id
+    vpc_id = data.aws_vpc.prod_vpc.id
     filter {
         name = "association.main"
         values = ["true"]
