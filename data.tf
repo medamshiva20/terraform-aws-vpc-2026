@@ -12,7 +12,8 @@ data "aws_vpc" "prod_vpc"{
 }
 
 data "aws_route_table" "prod"{
-    vpc_id = data.aws_vpc.default.id
+    #vpc_id = data.aws_vpc.default.id
+    vpc_id = data.aws_vpc.prod_vpc.id
     filter {
         name = "association.main"
         values = ["true"]
