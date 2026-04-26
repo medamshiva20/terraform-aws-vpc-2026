@@ -8,7 +8,7 @@ data "aws_availability_zones" "available"{
 #}
 
 data "aws_vpc" "prod-vpc"{
-   id = "vpc-072112754da905ebf"
+   id = "vpc-02369099af5a5808c"
 }
 
 data "aws_route_table" "prod"{

@@ -26,7 +26,7 @@ resource "aws_internet_gateway" "main"{
         },
         var.public_subnet_tags
     ) 
-}
+}  
 
 #private subnet
 resource "aws_subnet" "private"{
